@@ -19,10 +19,9 @@ namespace banco.Model
     {
       AberturaDeConta = DateTime.Now;
     }
-    public Cliente(double limiteMaximo, double saldo, string numeroConta, string nome, string endereco) : this()
+    public Cliente(double limiteMaximo, string numeroConta, string nome, string endereco) : this()
     {
       LimiteMaximo = limiteMaximo;
-      Saldo = saldo;
       NumeroConta = numeroConta;
       Nome = nome;
       Endereco = endereco;
