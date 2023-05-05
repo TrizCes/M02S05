@@ -7,9 +7,9 @@ namespace banco.Model
 {
   public class PessoaFisica : Cliente
   {
-    public DateTime DataDeAniversario { get; private set; }
+    public DateTime DataDeAniversario { get; set; }
 
-    public String Cpf { get; private set; }
+    public String Cpf { get; set; }
 
     public PessoaFisica() : base() { }
 
