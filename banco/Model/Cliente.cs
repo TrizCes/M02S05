@@ -8,29 +8,30 @@ namespace banco.Model
   public abstract class Cliente
   {
     private DateTime AberturaDeConta;
-    protected double LimiteMaximo { get; set; }
-    protected double Saldo { get; private set; }
-
-    public string Nome { get; private set; }
-    public string NumeroConta { get; private set; }
-    public string Endereco { get; protected set; }
-
+    protected decimal LimiteMaximo { get; set; }
+    protected decimal Saldo { get; set; }
+    public string Nome { get; set; }
+    public string NumeroConta { get; set; }
+    public string Endereco { get; set; }
+    public string Email { get; set; }
+    public string Telefone { get; set; }
     public Cliente()
     {
       AberturaDeConta = DateTime.Now;
     }
-    public Cliente(double limiteMaximo, string numeroConta, string nome, string endereco) : this()
+    public Cliente(decimal limiteMaximo, string numeroConta, string nome, string endereco, string email, string telefone) : this()
     {
       LimiteMaximo = limiteMaximo;
       NumeroConta = numeroConta;
       Nome = nome;
       Endereco = endereco;
-
+      Email = email;
+      Telefone = telefone;
     }
 
     public virtual void ResumoCliente()
     {
-      Console.WriteLine($"Conta: {NumeroConta}, Saldo: {Saldo}, Nome: {Nome}, Endereco: {Endereco}, Limite disponível: {LimiteMaximo}, Data de abertura: {AberturaDeConta}");
+      Console.WriteLine($"Conta: {NumeroConta}, Saldo: {Saldo}, Nome: {Nome}, Endereco: {Endereco}, Email: {Email}, Telefone: {Telefone} Limite disponível: {LimiteMaximo}, Data de abertura: {AberturaDeConta}");
     }
   }
 }
