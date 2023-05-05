@@ -12,7 +12,14 @@ namespace banco.Model
     public String Cpf { get; private set; }
 
     public PessoaFisica() : base() { }
-    public bool EhMaior()
+
+    public PessoaFisica(decimal limiteMaximo, string numeroConta, string nome, string endereco, string email, string telefone, DateTime dataDeAniversario, string cpf) : base(limiteMaximo, numeroConta, nome, endereco, email, telefone)
+    {
+      DataDeAniversario = dataDeAniversario;
+      Cpf = cpf;
+    }
+
+    public override bool EhMaior()
     {
       DateTime hoje = DateTime.Now;
       DateTime ObterIdadeMin = new DateTime(DataDeAniversario.Year + 18, DataDeAniversario.Month, DataDeAniversario.Day);
