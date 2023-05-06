@@ -29,9 +29,9 @@ namespace banco.Model
       Telefone = telefone;
     }
 
-    public virtual void ResumoCliente()
+    public virtual string ResumoCliente()
     {
-      Console.WriteLine($"Conta: {NumeroConta}, Saldo: {Saldo}, Nome: {Nome}, Endereco: {Endereco}, Email: {Email}, Telefone: {Telefone}, Limite disponível: {LimiteMaximo}, Data de abertura: {AberturaDeConta}.");
+      return $"Conta: {NumeroConta}, Saldo: {Saldo}, Nome: {Nome}, Endereco: {Endereco}, Email: {Email}, Telefone: {Telefone}, Limite disponível: {LimiteMaximo}, Data de abertura: {AberturaDeConta}";
     }
 
     public virtual bool EhMaior() { return true; }

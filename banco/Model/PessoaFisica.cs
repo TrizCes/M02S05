@@ -34,5 +34,9 @@ namespace banco.Model
         return false;
       }
     }
+    public override string ResumoCliente()
+    {
+      return $"{base.ResumoCliente()}, CPF: {Cpf}, Data de Nascimento: {DataDeAniversario} ";
+    }
   }
 }
