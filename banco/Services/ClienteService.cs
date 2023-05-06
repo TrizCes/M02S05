@@ -39,10 +39,9 @@ namespace banco.Services
 
     }
 
-    public string BuscarClientePorNumeroDeConta(string numeroConta)
+    public Cliente BuscarClientePorNumeroDeConta(string numeroConta)
     {
-      ListaClientes.Find(cliente => cliente.NumeroConta == numeroConta);
-      return "";
+      return ListaClientes.Find(cliente => cliente.NumeroConta == numeroConta);
     }
 
     public void ExibirClientes()
@@ -52,7 +51,7 @@ namespace banco.Services
       Console.WriteLine("________________________________________________________________________");
       foreach (var clientes in ListaClientes)
       {
-        clientes.ResumoCliente();
+        Console.WriteLine(clientes.ResumoCliente());
         Console.WriteLine("........................................................................");
       }
       Console.WriteLine("________________________________________________________________________");
